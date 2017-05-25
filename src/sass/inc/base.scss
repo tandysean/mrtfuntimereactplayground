@@ -1,0 +1,6 @@
+@import 'base-variables';
+
+@mixin siteWidth() {
+  width: 90vw;
+  margin: 0 auto;
+}

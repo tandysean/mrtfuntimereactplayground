@@ -1,0 +1,31 @@
+@import 'inc/base';
+
+body {
+  font-family: $bodyFont;
+  background: black;
+  color: white;
+  font-size: .85rem;
+}
+
+a {
+  color: red;
+}
+
+h1 {
+  @include siteWidth;
+  font-family: $headerFont;
+  font-size: 1.4rem;
+}
+
+.container {
+  @include siteWidth;
+  height: 80vh;
+  box-sizing: border-box;
+  border: 1px solid white;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer {
+  @include siteWidth;
+}
