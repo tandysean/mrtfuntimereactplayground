@@ -8,8 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist/'),
-    filename: '[name].bundle.js',
-    publicPath: '/assets'
+    filename: '[name].bundle.js'
   },
   devServer: {
     contentBase: path.resolve(__dirname, './src')
@@ -41,6 +40,13 @@ module.exports = {
           'style-loader',
           'css-loader',
           'sass-loader',
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'file-loader?name=images/[name].[ext]',
+          'image-webpack-loader'
         ]
       }
     ]
